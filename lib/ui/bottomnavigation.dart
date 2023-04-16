@@ -14,7 +14,7 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
 
-  List _pages = const [
+  final List _pages = const [
     HomeScreen(),
     Search(),
     Library(),
@@ -36,8 +36,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           BottomNavigationBarItem(
               backgroundColor: Colors.transparent,
               icon: Icon(Icons.home),
-              label: 'Home'
-          ),
+              label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
@@ -57,4 +56,3 @@ class _BottomNavigationState extends State<BottomNavigation> {
     );
   }
 }
-
