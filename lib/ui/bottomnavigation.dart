@@ -32,9 +32,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.black,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              backgroundColor: Colors.transparent,
               icon: Icon(Icons.home),
               label: 'Home'),
           BottomNavigationBarItem(

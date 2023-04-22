@@ -26,20 +26,25 @@ class _TopPicksState extends State<TopPicks> {
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               children: [
                 Image.asset(
                   'assets/images/picks$index.png',
                   fit: BoxFit.cover,
                   width: 200,
-                  height: 200,
+                  height: 220,
                 ),
-                Text(
-                  _singers[index],
-                  style: const TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'NotoSans-Black',
+                const SizedBox(height: 10,),
+                SizedBox(
+                  width: 200,
+                  child: Text(
+                    _singers[index],
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      fontFamily: 'NotoSans-Black',
+                    ),
                   ),
                 ),
               ],

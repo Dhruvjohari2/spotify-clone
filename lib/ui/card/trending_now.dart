@@ -9,8 +9,8 @@ class TrendingNow extends StatefulWidget {
 
 class _TrendingNowState extends State<TrendingNow> {
   final _singers = [
-    'Badshah',
-    'Jisten Bieber',
+    'Believer',
+    'Harley s in Hawaii',
     'Raftaar',
     'Ed Sheeran',
     'Katy Perry',
@@ -25,7 +25,7 @@ class _TrendingNowState extends State<TrendingNow> {
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               children: [
                 Image.asset(
@@ -34,11 +34,16 @@ class _TrendingNowState extends State<TrendingNow> {
                   width: 200,
                   height: 200,
                 ),
-                Text(
-                  _singers[index],
-                  style: const TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'NotoSans-Black',
+                const SizedBox(height: 10,),
+                SizedBox(
+                  width: 200,
+                  child: Text(
+                    _singers[index],
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      fontFamily: 'NotoSans-Black',
+                    ),
                   ),
                 ),
               ],

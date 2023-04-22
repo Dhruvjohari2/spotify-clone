@@ -9,7 +9,7 @@ class SingerCardView extends StatefulWidget {
 
 class _SingerCardViewState extends State<SingerCardView> {
   final _singers = [
-    'Badshah',
+    'Badshah,Katy perry ,pitbull and more',
     'Jisten Bieber',
     'Raftaar',
     'Ed Sheeran',
@@ -19,14 +19,14 @@ class _SingerCardViewState extends State<SingerCardView> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 250,
+    return SizedBox(
+      height: 270,
       child: ListView.builder(
         itemCount: 5,
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               children: [
                 Image.asset(
@@ -35,11 +35,18 @@ class _SingerCardViewState extends State<SingerCardView> {
                   width: 200,
                   height: 200,
                 ),
-                Text(
-                  _singers[index],
-                  style: const TextStyle(
-                    color: Colors.grey,
-                    fontFamily: 'NotoSans-Black',
+                const SizedBox(
+                  height: 15,
+                ),
+                SizedBox(
+                  width: 200,
+                  child: Text(
+                    _singers[index],
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      fontFamily: 'NotoSans-Black',
+                    ),
                   ),
                 ),
               ],
